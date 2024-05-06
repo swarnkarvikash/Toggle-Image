@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading">Your Image is visible</h1>
+    <button onclick="toggleImage()" id="toggle">Toggle Image</button>
+    <img src="https://cdn.photographylife.com/wp-content/uploads/2014/09/Nikon-D750-Image-Samples-2.jpg" alt="image" id="img">
+    <script>
+        function toggleImage(){
+            const heading = document.getElementById("heading");
+            const toggle = document.getElementById("toggle");
+            const image = document.getElementById("img");
+            if(image.style.opacity == 0){
+                image.style.opacity = 100;
+                heading.innerText = "Your Image is visible";
+
+            }
+            else{
+                image.style.opacity = 0;
+                heading.innerText = "Your Image is hidden";
+            }
+        }
+    </script>
+</body>
+</html>
